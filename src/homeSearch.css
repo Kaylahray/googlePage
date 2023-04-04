@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.google-img {
+  width: 300px;
+  height: 100px;
+}
+
+.box {
+  width: 80%;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.box div {
+  background-color: #f8f9fa;
+  padding: 10px;
+}
+.box p {
+  text-align: center;
+}
+#btn {
+  background-color: transparent;
+  border: none;
+}
+
+.input {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 20px;
+  border: 1px solid rgb(178, 174, 174);
+  width: 40%;
+  border-radius: 30px;
+}
+.input input {
+  height: 45px;
+  width: 70%;
+  border: none;
+}
+
+input:hover,
+input:visited,
+input:active,
+input:focus {
+  outline: none;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.languages p {
+  padding-left: 20px;
+}
+
+.list-lang {
+  display: flex;
+  list-style: none;
+}
+.list-lang a {
+  text-decoration: none;
+  padding: 10px;
+}
+.list-lang p {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .input {
+    width: 80%;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
