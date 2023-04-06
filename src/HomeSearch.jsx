@@ -4,24 +4,29 @@ import "./homeSearch.css";
 import { useState } from "react";
 
 function HomeSearch() {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(" ");
   const [search, setSearch] = useState(false);
+  const handleChange = (e) => setInput(e.target.value);
+  const handleEnter = (e) => {
+    if (e.keyCode === 13) {
+      setSearch((prev) => !prev);
+    }
+  };
+  const handleClick = () => {
+    setSearch((prev) => !prev);
+  };
 
   return (
     <div className="container">
       <img src={google} alt="google" className="google-img" />
       <div className="input">
-        <button
-          type="submit"
-          value={input}
-          id="btn"
-          onClick={() => setSearch((prev) => !prev)}
-        >
+        <button type="submit" value={input} id="btn" onClick={handleClick}>
           <i className="ri-search-eye-line"></i>
         </button>
         <input
           placeholder="Search here..."
-          onChange={(e) => setInput(e.target.value)}
+          onChange={handleChange}
+          onKeyDown={handleEnter}
         />
         <i className="ri-mic-line"></i>
         <i className="ri-camera-line"></i>
